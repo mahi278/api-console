@@ -16,7 +16,7 @@
         hidePropertyDetails: '=',
         showExamples: '='
       },
-      controller: function ($scope, $rootScope) {
+      controller: ['$scope', '$rootScope', function ($scope, $rootScope) {
         if (!Array.isArray($scope.list)) {
           $scope.listArray = Object.keys($scope.list).map(function (key) {
             return $scope.list[key];
@@ -177,7 +177,7 @@
         $scope.unique = function (arr) {
           return arr.filter (function (v, i, a) { return a.indexOf (v) === i; });
         };
-      },
+      }],
       compile: function (element) {
         return RecursionHelper.compile(element);
       }
