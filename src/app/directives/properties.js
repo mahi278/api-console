@@ -185,5 +185,5 @@
   };
 
   angular.module('RAML.Directives')
-    .directive('properties', RAML.Directives.properties);
+    .directive('properties', ['RecursionHelper', RAML.Directives.properties]);
 })();

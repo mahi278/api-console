@@ -914,7 +914,7 @@
   };
 
   angular.module('RAML.Directives')
-    .directive('properties', RAML.Directives.properties);
+    .directive('properties', ['RecursionHelper', RAML.Directives.properties]);
 })();
 
 (function () {
@@ -1531,7 +1531,7 @@
   };
 
   angular.module('RAML.Directives')
-    .directive('ramlField', RAML.Directives.ramlField);
+    .directive('ramlField', ['RecursionHelper', RAML.Directives.ramlField]);
 })();
 
 (function () {

@@ -2,7 +2,7 @@ node_modules
 .tmp
 .sass-cache
 .idea
-.idea/
+*.iml
 selenium
 vendor/bower_components
 bower_components
